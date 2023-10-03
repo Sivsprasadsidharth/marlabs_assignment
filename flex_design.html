@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        header {
+            text-align: center;
+            height: 10vh;
+            width: auto;
+            background-color:gray;
+            color:midnightblue;
+        }
+
+        section {
+            display: flex;;
+            flex-grow: 1;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 60vw 40vw;
+            
+        }
+
+        .col_aside {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: larger;
+            color: blue;
+            background-color:bisque;
+            
+        }
+
+        .col_article {
+            background-color: rgb(136, 112, 83);
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: lightgray;
+            padding: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+
+            section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .col_aside{
+
+
+        order: -1; 
+
+    }
+    .col_article {
+        flex: 1;
+        margin: 0;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Trial WebPage</h1>
+    </header>
+    <section>
+        <div class="container">
+            <div class="col_article">
+                <p>
+                    ARTICLE Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit voluptates,
+                    dignissimos quia natus incidunt omnis corrupti, totam architecto ipsa eius sint repudiandae
+                    dolorum fugiat. Saepe corporis nobis ab iste!
+                </p>
+            </div>
+            <div class="col_aside">
+                <p> ASIDE Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit voluptates,
+                    dignissimos quia natus incidunt omnis corrupti, totam architecto ipsa eius sint repudiandae
+                    dolorum fugiat. Saepe corporis nobis ab iste!
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h>All rights reserved</h>
+    </footer>
+</body>
+</html>
